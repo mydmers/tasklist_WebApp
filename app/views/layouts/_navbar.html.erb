@@ -19,13 +19,12 @@
               <ul class="dropdown-menu">
                 <li><center><%= link_to 'My profile', user_path(current_user) %></center></li>
                 <li role="separator" class="divider"></li>
-                <li><center>Logout</center></li>
+                <li><center><%= link_to 'Logout', logout_path, method: :delete %></center></li>
               </ul>
             </li>
           <% else %>
             <li><%= link_to 'Signup', signup_path %></li>
             <li><%= link_to 'Login', login_path %></li>
-            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
           <% end %>
         </ul>
       </div>
